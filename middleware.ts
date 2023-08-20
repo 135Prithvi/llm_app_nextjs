@@ -9,7 +9,7 @@ import { Redis } from "@upstash/redis";
 const redis = new Redis({
   url: "https://related-llama-43187.upstash.io",
   token:
-    "AaizACQgNjEzOTFhNjAtMmM0Zi00NTM0LTk4MzItZGNmYmYzMjYzNWM0MTM3ZDJlZTM0OWM3NGJhY2JhZGEzMDRjMzE3YzBlMWQ=",
+    process.env.TOKEN || ""
 });
 
 const ratelimit = new Ratelimit({
